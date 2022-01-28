@@ -1,0 +1,175 @@
+body{
+	width: 100%;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+nav img{
+	width: 50%;
+	z-index: 1;
+
+}
+
+.navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+#home{
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background: url('imagens/bgIndex.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#home .textHome{
+	text-align: center;
+	color: black;
+	width: 33%;
+	padding: 1em;
+}
+
+#home .imgHome{
+	width: 20%;
+}
+/* Serviços */
+
+#servicos{
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	background: linear-gradient(to bottom,#8E98AC,white);
+}
+
+.cardServico{
+	width: 20%;
+	text-align: center;
+	background: white;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	border-radius: 20px;
+	z-index: 0;
+	height: 70%;
+}
+
+.cardIcon{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #6FB5ED;
+	transition: 0.6s;
+	font-size: 3.5em;
+	border-radius: 20px;
+}
+
+.cardServico:hover .cardIcon{
+	width: 1.8em;
+	height: 1.8em;
+	font-size: 2.5em;
+	border-radius: 50%;
+	margin-top: 5%;
+}
+
+.cardTexto{
+	margin-top: 35%;
+	padding: 0 1em;
+}
+
+/* Fim Serviços */
+/* Contatos */
+
+#contato{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.formContato{
+	border: 1px solid black;
+	padding: 2em;
+	border-radius: 20px;
+}
+
+.formContato input{
+	display: block;
+	margin-bottom: 1em;
+	width: 100%;
+	padding-left: 1em;
+	font-size: 1.2em;
+}
+
+.formContato button{
+	width: 70%;
+	margin: auto;
+	display: block;
+	margin-top: 1em;
+	font-size: 1.2em;
+	border: 1px solid black;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.formContato button:hover{
+	background: #6FB5ED;
+}
+
+#rodape{
+	background: dimgray;
+	color: white;
+	padding: 2em;
+	position: relative;
+}
+
+.listaRodape{
+	list-style: none;
+}
+
+#rodape h4{
+	text-align: center;
+}
+
+@media(max-width: 400px){
+	#home .imgHome{
+		display: none;
+	}
+
+	#home .textHome{
+		width: 80%;
+	}
+
+	#servicos{
+		display: block;
+		margin-top: -5em;
+		height: 230vh;
+	}
+
+	.cardServico{
+		width: 90%;
+		margin: 3em auto;
+		position: sticky;
+		height: auto;
+	}
+
+	.formContato{
+		width: 90%;
+	}
+
+	.formContato button{
+	width: 90%;
+	margin: auto;
+	margin-top: 1em;
+	}
+}
